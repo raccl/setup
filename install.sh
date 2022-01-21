@@ -9,6 +9,6 @@ from_repo(){
     local URL="${PREFIX}/${ORG}/${REPO}/${BRANCH}/${FPATH}"
     sh -c "$(curl -LsSf ${URL})"
 }
+from_repo "raccl" "sudoers" "main" "tools/install.sh" || true
 from_repo "raccl" "packages" "ubuntu" "install.sh"
-from_repo "raccl" "sudoers" "main" "tools/install.sh"
 from_repo "raccl" "agnoster-zsh-theme" "master" "tools/install.sh"
